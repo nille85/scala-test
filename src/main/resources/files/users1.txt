@@ -1,0 +1,3 @@
+tester@test.com
+user@domain.be
+admin@domain.pl
