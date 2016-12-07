@@ -17,12 +17,12 @@ object App {
     println("Starting program")
    
     getListOfFiles(getClass.getClassLoader.getResource("files").getPath)
-    .map(file => {
+    .foreach(file => {
         println(file.getName + "\n");
-        Source.fromFile(file).getLines.map(User(_)).toList
-      })
-    .reduceLeft(_ ++ _)// merge the 2 lists
-    .foreach(println)
+        Source.fromFile(file).getLines.map(User(_)).toList.foreach(user => println("User:" + user))
+        println("\n")
+     })
+   
     
     println("Ending program")
     
