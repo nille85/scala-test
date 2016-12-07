@@ -1,0 +1,28 @@
+apply plugin: 'scala'
+apply plugin: 'application'
+
+mainClassName = "be.nille.App"
+
+[compileScala, compileTestScala]*.options*.encoding = 'UTF-8'
+
+
+version = '1.0.0-SNAPSHOT'
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Scala Test',
+                   'Implementation-Version': version
+    }
+}
+
+
+repositories {
+    mavenCentral()
+
+}
+
+
+
+dependencies {
+    compile 'org.scala-lang:scala-library:2.11.1'
+    testCompile 'junit:junit:4.10'
+}
