@@ -10,9 +10,9 @@ import scala.io.Source
 
 object App {
 
-  /**
-   * @param args the command line arguments
-   */
+  
+  case class User(email:String) {}
+  
   def main(args: Array[String]): Unit = {
     println("Starting program")
    
@@ -36,5 +36,7 @@ object App {
       List[File]()
     }
   }
+  
+  
 
 }
